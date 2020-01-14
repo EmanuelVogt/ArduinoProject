@@ -1,8 +1,8 @@
 <?php
 
-    $CON_CONEXAO = "mysql:host=localhost;dbname=bdarduino;charset=utf8";
-    $CON_USUARIO = "root";
-    $CON_SENHA = ""; 
+    $CON_CONEXAO = "mysql:host=db4free.net;dbname=dbarduino;charset=utf8";
+    $CON_USUARIO = "infonfc";
+    $CON_SENHA = "12345678"; 
 
     try {
 

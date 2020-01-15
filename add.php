@@ -2,15 +2,12 @@
     
     include "conexao.php";
 
-    $s1_rec = $_GET['s1'];
-    $s2_rec = $_GET['s2'];
-    $s3_rec = $_GET['s3'];
+    $s1_rec = $_GET['idrfid'];
 
-    $SQL_INSERT = "INSERT INTO tbsensores (rfid) VALUES (:ID)";
-
+    $SQL_INSERT = "INSERT INTO rfid (idrfid) VALUES (:ID1)";
     $stmt = $conexao->prepare($SQL_INSERT);
 
-    $stmt->bindParam(":ID", $s1_rec);
+    $stmt->bindParam(":ID1", $s1_rec);
     
         if($stmt->execute()) {
             echo "\n ,insert ok";

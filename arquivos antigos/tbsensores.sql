@@ -33,8 +33,7 @@ CREATE TABLE `tbsensores` (
   `sensor1` varchar(15) NOT NULL,
   `sensor2` varchar(15) NOT NULL,
   `sensor3` varchar(15) NOT NULL,
-  `datahora` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `datahora` datetime NOT NULL DEFAULT current_timestamp) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tabelas despejadas

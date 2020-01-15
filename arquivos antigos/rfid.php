@@ -30,7 +30,7 @@
               </tfoot>
               <tbody>
               <?php
-        require "rfid.class.php";
+        require "rfid.class.php"
               //marca é classe
               //marcas é a instancia do objeto
               $rfid = new RFID();
@@ -42,9 +42,8 @@
               foreach ($dados as $m) {
               ?>
                 <tr>
-                  <td><a href="alterarCliente.php?id=<?php echo $m["idMarca"]; ?>"><?php echo $m["idMarca"]; ?></a></td>
-                  <td><?php echo $m["cliente"]; ?></td>
-                  <td><a href="excluirMarca.php?id=<?php echo $m["idMarca"]; ?>">Excluir</a>
+                  
+                  <td><a href="excluirID.php?id=<?php echo $m["id"]; ?>">Excluir</a>
                   </td>
                 </tr>
               <?php } } ?>  

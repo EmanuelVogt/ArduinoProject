@@ -7,26 +7,22 @@
  
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Cadastrar Cliente</title>
+  <title>Excluir ID</title>
  
 </head>
  
 <body>
- 
           <?php
- 
-          require "cliente.class.php";
+           require "rfid.class.php";
           if ($_POST) {
-              $nomeCliente = $_POST["cliente"];
-              $cpf = $_POST["cpf"];
-              $telefone = $_POST["telefone"];
-              $endereco = $_POST["endereco"];
+              $id = $_POST["id"];
              
-              $cliente = new Cliente();
-$cliente->setCliente($nomeCliente);
-$resultado = $cliente->cadastrar();
+             
+              $rfid = new RFID();
+$rfid->setId($id);
+$resultado = $rfid->excluir();
     if ($resultado ==0) {
-        echo "Cliente cadastrado com sucesso com o código: ". $cliente->getIdMarca();
+        echo "ID excluido com sucesso com o código: ". $rfid->getId();
         echo "<br/>";
     }
     else {
@@ -38,7 +34,7 @@ $resultado = $cliente->cadastrar();
               echo "Dados não preenchidos";
           }
           ?>
-       
+     
 </body>
  
 </html>
